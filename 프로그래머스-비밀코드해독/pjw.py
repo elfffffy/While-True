@@ -9,12 +9,9 @@ def solution(n, q, ans):
     for case in possible_cases:
         check = 0
         for i in range(len(q)):
-            query = q[i]
-            q_answer = ans[i]
-
             cnt = 0
             case_set = set(case)
-            query_set = set(query)
+            query_set = set(q[i])
 
             cnt += len(case_set & query_set)
 
