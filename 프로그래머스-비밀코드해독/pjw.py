@@ -13,11 +13,10 @@ def solution(n, q, ans):
             q_answer = ans[i]
 
             cnt = 0
-            for x in case:
-                for y in query:
-                    if x < y: break
-                    if x == y:
-                        cnt += 1
+            case_set = set(case)
+            query_set = set(query)
+
+            cnt += len(case_set & query_set)
 
             if cnt == ans[i]:
                 check += 1
